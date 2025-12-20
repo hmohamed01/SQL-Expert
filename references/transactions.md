@@ -2,6 +2,15 @@
 
 Isolation levels, deadlock prevention, and distributed transaction patterns.
 
+## Table of Contents
+
+- [Transaction Fundamentals](#transaction-fundamentals)
+- [Isolation Levels](#isolation-levels)
+- [Deadlock Prevention](#deadlock-prevention)
+- [Lock Types and Hints](#lock-types-and-hints)
+- [Distributed Transactions](#distributed-transactions)
+- [Transaction Best Practices](#transaction-best-practices)
+
 ## Transaction Fundamentals
 
 ### Basic Transaction Structure

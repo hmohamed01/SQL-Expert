@@ -65,8 +65,8 @@ END CATCH;
 
 ## Additional References
 
-- [patterns.md](patterns.md) - Query patterns and templates (CTEs, pagination, PIVOT, MERGE, window functions)
-- [performance.md](performance.md) - Execution plan analysis, parameter sniffing, Query Store, wait statistics
-- [security.md](security.md) - SQL injection prevention, dynamic SQL safety, permissions, data masking
-- [data-types.md](data-types.md) - Type selection, collation handling, precision/scale, storage optimization
-- [transactions.md](transactions.md) - Isolation levels, deadlock prevention, distributed transactions, sagas
+- [references/patterns.md](references/patterns.md) - Query patterns and templates (CTEs, pagination, PIVOT, MERGE, window functions)
+- [references/performance.md](references/performance.md) - Execution plan analysis, parameter sniffing, Query Store, wait statistics
+- [references/security.md](references/security.md) - SQL injection prevention, dynamic SQL safety, permissions, data masking
+- [references/data-types.md](references/data-types.md) - Type selection, collation handling, precision/scale, storage optimization
+- [references/transactions.md](references/transactions.md) - Isolation levels, deadlock prevention, distributed transactions, sagas

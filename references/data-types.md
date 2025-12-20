@@ -2,6 +2,17 @@
 
 Type selection guidelines, collation handling, and precision/scale considerations.
 
+## Table of Contents
+
+- [Numeric Types](#numeric-types)
+- [String Types](#string-types)
+- [Date and Time Types](#date-and-time-types)
+- [Collation](#collation)
+- [Binary Types](#binary-types)
+- [GUID / UNIQUEIDENTIFIER](#guid--uniqueidentifier)
+- [Type Conversion](#type-conversion)
+- [Storage Optimization Tips](#storage-optimization-tips)
+
 ## Numeric Types
 
 ### Integer Selection Guide

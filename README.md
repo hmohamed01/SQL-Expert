@@ -23,14 +23,16 @@ git clone https://github.com/your-username/SQL-Expert.git ~/.claude/skills/t-sql
 
 ## Contents
 
-| File | Description |
-|------|-------------|
-| `SKILL.md` | Main skill definition with core instructions |
-| `patterns.md` | Query patterns: CTEs, pagination, PIVOT, MERGE, window functions |
-| `performance.md` | Execution plans, parameter sniffing, Query Store, wait statistics |
-| `security.md` | SQL injection prevention, dynamic SQL, permissions, data masking |
-| `data-types.md` | Type selection, collation, precision/scale, storage optimization |
-| `transactions.md` | Isolation levels, deadlocks, distributed transactions, sagas |
+```
+t-sql-expert/
+├── SKILL.md                      # Main skill definition with core instructions
+└── references/
+    ├── patterns.md               # Query patterns: CTEs, pagination, PIVOT, MERGE, window functions
+    ├── performance.md            # Execution plans, parameter sniffing, Query Store, wait statistics
+    ├── security.md               # SQL injection prevention, dynamic SQL, permissions, data masking
+    ├── data-types.md             # Type selection, collation, precision/scale, storage optimization
+    └── transactions.md           # Isolation levels, deadlocks, distributed transactions, sagas
+```
 
 ## Usage
 
