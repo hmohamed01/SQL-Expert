@@ -12,13 +12,13 @@ This skill provides guidance for writing, optimizing, and debugging T-SQL querie
 Clone this repository into your project's `.claude/skills/` directory:
 ```bash
 mkdir -p .claude/skills
-git clone https://github.com/your-username/SQL-Expert.git .claude/skills/t-sql-expert
+git clone https://github.com/hmohamed01/SQL-Expert.git .claude/skills/t-sql-expert
 ```
 
 ### User-level (all projects)
 Clone to your personal Claude Code skills directory:
 ```bash
-git clone https://github.com/your-username/SQL-Expert.git ~/.claude/skills/t-sql-expert
+git clone https://github.com/hmohamed01/SQL-Expert.git ~/.claude/skills/t-sql-expert
 ```
 
 ## Contents
