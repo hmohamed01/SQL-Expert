@@ -16,8 +16,20 @@ git clone https://github.com/hmohamed01/SQL-Expert.git .claude/skills/sql-expert
 
 ### User-level (all projects)
 Clone to your personal Claude Code skills directory:
+
+**macOS/Linux:**
 ```bash
 git clone https://github.com/hmohamed01/SQL-Expert.git ~/.claude/skills/sql-expert
+```
+
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/hmohamed01/SQL-Expert.git $HOME\.claude\skills\sql-expert
+```
+
+**Windows (Command Prompt):**
+```cmd
+git clone https://github.com/hmohamed01/SQL-Expert.git %USERPROFILE%\.claude\skills\sql-expert
 ```
 
 ## Contents
