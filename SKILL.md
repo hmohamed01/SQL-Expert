@@ -1,9 +1,9 @@
 ---
-name: t-sql-expert
+name: sql-expert
 description: Write, optimize, and debug T-SQL queries for Microsoft SQL Server. Covers CTEs, window functions, PIVOT, MERGE, APPLY operators, execution plan analysis, indexing strategies, and stored procedures. Use when working with SQL Server, T-SQL scripts, .sql files, stored procedures, query optimization, or database performance tuning.
 ---
 
-# T-SQL Expert
+# SQL Expert
 
 Expert assistance for Microsoft SQL Server and T-SQL development.
 

@@ -1,4 +1,4 @@
-# T-SQL Expert
+# SQL Expert
 
 A Claude Code skill for Microsoft SQL Server and T-SQL development expertise.
 
@@ -11,19 +11,19 @@ This skill provides guidance for writing, optimizing, and debugging T-SQL querie
 ### Project-level (this repository only)
 Clone this repository into your project's `.claude/skills/` directory:
 ```bash
-git clone https://github.com/hmohamed01/SQL-Expert.git .claude/skills/t-sql-expert
+git clone https://github.com/hmohamed01/SQL-Expert.git .claude/skills/sql-expert
 ```
 
 ### User-level (all projects)
 Clone to your personal Claude Code skills directory:
 ```bash
-git clone https://github.com/hmohamed01/SQL-Expert.git ~/.claude/skills/t-sql-expert
+git clone https://github.com/hmohamed01/SQL-Expert.git ~/.claude/skills/sql-expert
 ```
 
 ## Contents
 
 ```
-t-sql-expert/
+sql-expert/
 ├── SKILL.md                      # Main skill definition with core instructions
 └── references/
     ├── patterns.md               # Query patterns: CTEs, pagination, PIVOT, MERGE, window functions
