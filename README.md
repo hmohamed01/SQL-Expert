@@ -11,7 +11,6 @@ This skill provides guidance for writing, optimizing, and debugging T-SQL querie
 ### Project-level (this repository only)
 Clone this repository into your project's `.claude/skills/` directory:
 ```bash
-mkdir -p .claude/skills
 git clone https://github.com/hmohamed01/SQL-Expert.git .claude/skills/t-sql-expert
 ```
 
