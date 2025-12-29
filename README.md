@@ -8,41 +8,45 @@ This skill provides guidance for writing, optimizing, and debugging T-SQL querie
 
 ## Installation
 
-### Project-level (this repository only)
-Clone this repository into your project's `.claude/skills/` directory:
-```bash
-git clone https://github.com/hmohamed01/SQL-Expert.git .claude/skills/sql-expert
-```
+Clone this repository, then copy the `sql-expert` folder to your skills directory:
 
 ### User-level (all projects)
-Clone to your personal Claude Code skills directory:
 
 **macOS/Linux:**
 ```bash
-git clone https://github.com/hmohamed01/SQL-Expert.git ~/.claude/skills/sql-expert
+cp -r sql-expert ~/.claude/skills/
 ```
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/hmohamed01/SQL-Expert.git $HOME\.claude\skills\sql-expert
+Copy-Item -Recurse sql-expert $HOME\.claude\skills\
 ```
 
-**Windows (Command Prompt):**
-```cmd
-git clone https://github.com/hmohamed01/SQL-Expert.git %USERPROFILE%\.claude\skills\sql-expert
+### Project-level (current project only)
+
+**macOS/Linux:**
+```bash
+cp -r sql-expert .claude/skills/
 ```
 
-## Contents
+**Windows (PowerShell):**
+```powershell
+Copy-Item -Recurse sql-expert .claude\skills\
+```
+
+## Repository Structure
 
 ```
-sql-expert/
-├── SKILL.md                      # Main skill definition with core instructions
-└── references/
-    ├── patterns.md               # Query patterns: CTEs, pagination, PIVOT, MERGE, window functions
-    ├── performance.md            # Execution plans, parameter sniffing, Query Store, wait statistics
-    ├── security.md               # SQL injection prevention, dynamic SQL, permissions, data masking
-    ├── data-types.md             # Type selection, collation, precision/scale, storage optimization
-    └── transactions.md           # Isolation levels, deadlocks, distributed transactions, sagas
+SQL-Expert/
+├── README.md
+└── sql-expert/                   # <- Copy this folder to your skills directory
+    ├── SKILL.md                  # Main skill definition with core instructions
+    └── references/
+        ├── patterns.md           # Query patterns: CTEs, pagination, PIVOT, MERGE, window functions
+        ├── performance.md        # Execution plans, parameter sniffing, Query Store, wait statistics
+        ├── security.md           # SQL injection prevention, dynamic SQL, permissions, data masking
+        ├── data-types.md         # Type selection, collation, precision/scale, storage optimization
+        └── transactions.md       # Isolation levels, deadlocks, distributed transactions, sagas
 ```
 
 ## Usage
