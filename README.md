@@ -1,5 +1,9 @@
 # SQL Expert
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![SQL Server](https://img.shields.io/badge/SQL%20Server-2016--2022-CC2927.svg)](https://www.microsoft.com/sql-server)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet.svg)](https://claude.ai/code)
+
 A Claude Code skill for Microsoft SQL Server and T-SQL development expertise.
 
 ## Overview
