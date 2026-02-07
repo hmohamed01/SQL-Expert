@@ -1,6 +1,5 @@
 # SQL Expert
 
-[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-2016--2022-CC2927.svg)](https://www.microsoft.com/sql-server)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet.svg)](https://claude.ai/code)
