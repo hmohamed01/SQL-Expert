@@ -10,6 +10,14 @@ A Claude Code skill for Microsoft SQL Server and T-SQL development expertise.
 
 This skill provides guidance for writing, optimizing, and debugging T-SQL queries. It covers advanced querying techniques, performance tuning, security best practices, and transaction management.
 
+## Features
+
+- **Live Documentation Verification** - Verifies T-SQL syntax against Microsoft's official [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository using WebFetch, with WebSearch fallback when exact URLs are unknown
+- **Structured Workflows** - Guided workflows for query development, performance optimization, and security implementation
+- **Quick-Reference Patterns** - Inline examples for common tasks like pagination, running totals, and safe dynamic SQL
+- **Anti-Pattern Detection** - Catches non-SARGable predicates, implicit conversions, and other performance pitfalls
+- **Comprehensive References** - Five detailed reference docs covering query patterns, performance tuning, security, data types, and transactions
+
 ## Installation
 
 Clone this repository, then copy the `sql-expert` folder to your skills directory:
