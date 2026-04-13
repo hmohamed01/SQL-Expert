@@ -12,7 +12,7 @@ This skill provides guidance for writing, optimizing, and debugging T-SQL querie
 
 ## Features
 
-- **Live Documentation Verification** - Verifies T-SQL syntax against Microsoft's official [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository using WebFetch, with WebSearch fallback when exact URLs are unknown
+- **Live Documentation Verification** - Verifies T-SQL syntax against Microsoft's official [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository using WebFetch, with WebSearch fallback and conditional verification tiers (MUST/SHOULD/Skip) to balance accuracy with efficiency
 - **Structured Workflows** - Guided workflows for query development, performance optimization, and security implementation
 - **Quick-Reference Patterns** - Inline examples for common tasks like pagination, running totals, and safe dynamic SQL
 - **Anti-Pattern Detection** - Catches non-SARGable predicates, implicit conversions, and other performance pitfalls

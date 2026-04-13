@@ -94,65 +94,45 @@ See [references/security.md](references/security.md) for security patterns.
 
 ## Live Verification
 
-You MUST verify T-SQL syntax against official Microsoft documentation when accuracy is critical. Do not rely solely on training data for function syntax or statement options.
+Do not rely solely on training data for exact T-SQL syntax, parameter lists, or version-specific behavior. Use WebFetch and WebSearch to verify against official Microsoft documentation.
 
-**Tools to use:**
-- **WebFetch**: Retrieve raw markdown from Microsoft's GitHub docs
-- **WebSearch**: Find correct documentation URLs
+### When to Verify
 
-### Documentation Sources
+**MUST verify** — exact function signatures, parameter names/types, return types, version-introduced annotations
+**SHOULD verify** — version-specific feature availability when user specifies a SQL Server version different from 2019+
+**Skip verification** — general best practices, fundamental SQL syntax (SELECT, JOIN, WHERE), patterns covered in bundled references
 
-| Content Type | Raw Markdown URL Pattern |
-|--------------|-------------------------|
-| T-SQL Functions | `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/functions/{function-name}.md` |
-| T-SQL Statements | `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/statements/{statement-name}.md` |
-| Data Types | `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/data-types/{type-name}.md` |
-| Language Elements | `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/language-elements/{element-name}.md` |
+### Documentation Sources (Raw Markdown)
 
-### When Verification is Required
+Use WebFetch with these URL patterns to retrieve raw documentation:
 
-| Scenario | Action |
-|----------|--------|
-| Providing exact function syntax | **MUST** verify against GitHub docs |
-| Recommending a specific approach | **SHOULD** verify it applies to user's SQL Server version |
-| Writing complex queries | **SHOULD** verify function parameters |
-| General best practices | Static references are sufficient |
+| Content Type | URL Pattern |
+|---|---|
+| Functions | `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/functions/{function-name}-transact-sql.md` |
+| Statements | `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/statements/{statement-name}-transact-sql.md` |
+| Data Types | `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/data-types/{type-name}-transact-sql.md` |
+| Language Elements | `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/language-elements/{element-name}-transact-sql.md` |
 
-### Step 1: Verify Function/Statement Syntax
+Example: To verify STRING_AGG, use WebFetch on:
+`https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/functions/string-agg-transact-sql.md`
 
-When providing T-SQL syntax, **use WebFetch** to verify:
+### Verification Workflow
 
-**WebFetch call:**
-- **URL**: `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/functions/{function-name}.md`
-- **Prompt**: `Extract the complete function syntax, required parameters, return type, and SQL Server version requirements`
+1. **Try WebFetch** on the raw GitHub URL using the patterns above. Confirm the function signature, parameters, return type, and version requirements from the fetched content.
+2. **Fallback to WebSearch** if the URL returns an error or the content is unclear. Search: `{function-name} T-SQL site:learn.microsoft.com/en-us/sql`. Then use WebFetch on the result URL.
+3. **State uncertainty** if neither tool provides a clear answer:
+   > "I wasn't able to verify this syntax against live documentation. Please confirm at: https://learn.microsoft.com/en-us/sql/t-sql/functions/{function-name}"
 
-**Example for STRING_AGG:**
-- **URL**: `https://raw.githubusercontent.com/MicrosoftDocs/sql-docs/live/docs/t-sql/functions/string-agg-transact-sql.md`
+### What to Extract from Verified Docs
 
-### Step 2: WebSearch Fallback
+After fetching documentation, confirm and include:
+- Complete syntax with all optional clauses
+- Required vs optional parameters
+- Return type
+- SQL Server version where the feature was introduced
+- Any deprecation warnings or behavior changes across versions
 
-If the exact URL is unknown, **use WebSearch**:
-
-**WebSearch call:**
-- **Query**: `{function-name} T-SQL site:learn.microsoft.com/en-us/sql`
-
-**Then use WebFetch** on the returned URL to get the markdown content.
-
-### Step 3: State Uncertainty
-
-If verification fails, tell the user:
-> "I wasn't able to verify this syntax against live documentation. Please confirm
-> by checking: https://learn.microsoft.com/en-us/sql/t-sql/functions/{function-name}"
-
-### Verification Examples
-
-**Good** (verified with live data):
-> "STRING_AGG (SQL Server 2017+) concatenates string values with a separator:
-> `STRING_AGG(expression, separator) [WITHIN GROUP (ORDER BY ...)]`
-> Verified against Microsoft docs."
-
-**Bad** (unverified claim):
-> "Use CONCAT_WS with 5 parameters..." ← May have incorrect syntax!
+Note any discrepancies between training knowledge and live docs — the live documentation is authoritative.
 
 ## Key Patterns
 

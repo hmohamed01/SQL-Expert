@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.2.0] - 2026-04-12
+
+### Changed
+
+- **Live Verification** - Rewrote verification section with clearer conditional tiers (MUST/SHOULD/Skip) to prevent over-verification of stable syntax
+- **Documentation URL patterns** - Fixed raw GitHub URL patterns to include `-transact-sql.md` suffix matching Microsoft's actual file naming
+- **Verification workflow** - Consolidated into a unified 3-step flow: WebFetch → WebSearch fallback → state uncertainty
+- **Result handling** - Added "What to Extract" guidance so verified docs are used consistently (syntax, parameters, return type, version, deprecations)
+
+### Removed
+
+- Invalid WebFetch "Prompt" parameter from tool usage instructions
+
 ## [1.1.0] - 2026-02-06
 
 ### Added
